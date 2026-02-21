@@ -12,16 +12,6 @@ h1, h2, h3, .serif-font {
   font-family: 'Noto Serif Thai', serif;
 }
 
-.chart-container {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  height: 350px;
-  max-height: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .nav-active {
   border-bottom: 2px solid #B45309;
   color: #B45309;
