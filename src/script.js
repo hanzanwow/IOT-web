@@ -61,46 +61,6 @@ function updateCraftInfo(index) {
     });
 }
 
-function initChart() {
-    const ctx = document.getElementById("malaiTypeChart").getContext("2d");
-    new Chart(ctx, {
-        type: "bar",
-        data: {
-            labels: [
-                "มาลัยข้อ (Malai Kho)",
-                "มาลัยสาย (Malai Sai)",
-                "มาลัยจิ๋ว (Malai Jew)",
-            ],
-            datasets: [
-                {
-                    label: "ความซับซ้อน (ระดับ 1-10)",
-                    data: [6, 10, 5],
-                    backgroundColor: "rgba(180, 83, 9, 0.7)",
-                    borderColor: "rgb(180, 83, 9)",
-                    borderWidth: 1,
-                },
-                {
-                    label: "เวลาที่ใช้ผลิต (ระดับ 1-10)",
-                    data: [5, 10, 4],
-                    backgroundColor: "rgba(209, 213, 219, 0.7)",
-                    borderColor: "rgb(156, 163, 175)",
-                    borderWidth: 1,
-                },
-            ],
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                y: { beginAtZero: true, max: 10 },
-            },
-            plugins: {
-                legend: { position: "bottom" },
-            },
-        },
-    });
-}
-
 const footerLinksData = [
     { text: "Sanook Travel", url: "https://www.sanook.com/travel/921423/" },
     { text: "MGR", url: "https://mgronline.com/dhamma/detail/9590000011198" },
@@ -114,6 +74,7 @@ const footerLinksData = [
 
 function initFooterLinks() {
     const footerContainer = document.getElementById("footer-links");
+
     footerLinksData.forEach((link) => {
         const a = document.createElement("a");
         a.href = link.url;
@@ -125,7 +86,6 @@ function initFooterLinks() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    initChart();
     initFooterLinks();
 });
 
